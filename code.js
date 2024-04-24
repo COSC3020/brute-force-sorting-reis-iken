@@ -11,7 +11,7 @@ function doPermutations(a, start, length, permutations) {
         if (JSON.stringify(a) === JSON.stringify(a.slice().sort((x, y) => x - y))) {
             return true;
         }
-        return false;
+    return false;
     }
     for (let i = start; i < length; i++) {
         swap(a, start, i);
@@ -24,7 +24,7 @@ function doPermutations(a, start, length, permutations) {
 }
 
 function swap(a, i, j) {
-        let temp = a[i];
-        a[i] = a[j];
-        a[j] = temp;
-    }
+    let temp = a[i];
+    a[i] = a[j];
+    a[j] = temp;
+}

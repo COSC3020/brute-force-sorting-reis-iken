@@ -21,3 +21,15 @@ randomly without memory instead of systematically trying them?
 
 Describe your reasoning and the conclusion you've come to. Your reasoning is the
 most important part. Add your answer to this markdown file.
+
+**MY ANSWER:**
+
+This implementation checks if the permutation is sorted, and if it is not, then it recursively generates all the possible permutations of the input array of size n.
+
+In the best case, our data set is already sorted, and the checks would take time n, giving us a best-case runtime complexity of O(n).
+
+In the worst case, our algorithm generates all the possible permutations, which is factorial. So the worst-case runtime complexity is O(n!).
+
+If we randomly generated permutations without using memory (why would we ever do this?!), the best case would still be O(n) if we just so happened to randomly generate the sorted permutation.
+
+But the worst case run time would increase. The expected number of random generations should be proportional to the number of permutations... so I believe we would multiply n by n! to get a worst case runtime complexity of O(n * n!). Yikes.
